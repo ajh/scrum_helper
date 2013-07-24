@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require 'bundler/setup'
+
+require "thor"
+
+require_relative "../lib/scrum_helper"
+
+ScrumHelper.start ARGV
