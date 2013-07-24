@@ -11,7 +11,6 @@ class ScrumHelper < Thor
     USER_CONFIG_PATH,
     Pathname.new(Dir.getwd).join("scrum_helper.yml")
 
-  warn CONFIG.oauth.inspect
   desc "search QUERY", "search trello cards for QUERY"
   def search(query)
     params = {
@@ -74,7 +73,7 @@ class ScrumHelper < Thor
             puts "* #{card[:name]} - #{card[:url]}"
           end
 
-          puts 
+          puts
         end
       end
 
